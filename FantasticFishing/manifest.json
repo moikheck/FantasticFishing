@@ -1,0 +1,10 @@
+{
+  "Name": "Fantastic Fishing",
+  "Author": "moikheck",
+  "Version": "0.0.1",
+  "Description": "New fish, equipment, and more: the Fantastic Fishing mod!",
+  "UniqueID": "moikheck.FantasticFishing",
+  "EntryDll": "FantasticFishing.dll",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": []
+}

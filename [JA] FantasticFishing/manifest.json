@@ -1,0 +1,12 @@
+{
+  "Name": "[JA] Fantastic Fishing",
+  "Author": "moikheck",
+  "Version": "1.0.0",
+  "Description": "The JSON assets for the Fantastic Fishing mod.",
+  "UniqueID": "moikheck.FantasticFishingJA",
+  "MinimumApiVersion": "3.0.0",
+  "UpdateKeys": [],
+  "ContentPackFor": {
+		"UniqueID": "spacechase0.JsonAssets"
+  }
+}

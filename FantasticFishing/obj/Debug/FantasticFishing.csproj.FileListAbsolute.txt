@@ -1,0 +1,6 @@
+C:\Users\Mike\Desktop\FantasticFishing\FantasticFishing\bin\Debug\FantasticFishing.dll
+C:\Users\Mike\Desktop\FantasticFishing\FantasticFishing\bin\Debug\FantasticFishing.pdb
+C:\Users\Mike\Desktop\FantasticFishing\FantasticFishing\obj\Debug\FantasticFishing.csproj.AssemblyReference.cache
+C:\Users\Mike\Desktop\FantasticFishing\FantasticFishing\obj\Debug\FantasticFishing.csproj.CoreCompileInputs.cache
+C:\Users\Mike\Desktop\FantasticFishing\FantasticFishing\obj\Debug\FantasticFishing.dll
+C:\Users\Mike\Desktop\FantasticFishing\FantasticFishing\obj\Debug\FantasticFishing.pdb
