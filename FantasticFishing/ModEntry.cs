@@ -15,10 +15,13 @@ namespace FantasticFishing
     {
         private bool trueHatEvent = false;
         private bool anglerBootsEvent = false;
+        private bool anglerVestEvent = false;
         public override void Entry(IModHelper helper)
         {
             helper.Events.Input.ButtonPressed += this.OnButtonPressed;
             helper.Events.GameLoop.UpdateTicked += this.OnUpdateTicked;
+            helper.Events.GameLoop.DayStarted += this.OnWearingGearOvernight;
+            helper.Events.GameLoop.SaveLoaded += this.OnWearingGearOnLogin;
         }
 
 
@@ -38,6 +41,24 @@ namespace FantasticFishing
             this.Monitor.Log($"{Game1.player.Name} pressed {e.Button}.", LogLevel.Debug);
         }
 
+        private void OnWearingGearOvernight(object sender, EventArgs e)
+        {
+            if(trueHatEvent)
+                Game1.player.addedFishingLevel.Value += 1;
+            if(anglerBootsEvent)
+                Game1.player.addedFishingLevel.Value += 1;
+            if(anglerVestEvent)
+                Game1.player.addedFishingLevel.Value += 1;
+        }
+        private void OnWearingGearOnLogin(object sender, EventArgs e)
+        {
+            if (trueHatEvent)
+                Game1.player.addedFishingLevel.Value -= 1;
+            if (anglerBootsEvent)
+                Game1.player.addedFishingLevel.Value -= 1;
+            if (anglerVestEvent)
+                Game1.player.addedFishingLevel.Value -= 1;
+        }
 
         private void OnUpdateTicked(object sender, EventArgs e)
         {
@@ -45,13 +66,11 @@ namespace FantasticFishing
             //True Fisher Hat
             if (Game1.player.hat.Value != null && Game1.player.hat.Get().displayName == "True Fisher Hat" && !trueHatEvent)
             {
-                this.Monitor.Log($"Hat put on!", LogLevel.Debug);
                 Game1.player.addedFishingLevel.Value += 1;
                 this.trueHatEvent = true;
             }
-            if (Game1.player.hat.Value == null && trueHatEvent)
+            if ((Game1.player.hat.Value == null || (Game1.player.hat.Value != null && Game1.player.hat.Get().displayName != "True Fisher Hat")) && trueHatEvent)
             {
-                this.Monitor.Log($"Hat taken off!", LogLevel.Debug);
                 Game1.player.addedFishingLevel.Value -= 1;
                 this.trueHatEvent = false;
             }
@@ -59,15 +78,25 @@ namespace FantasticFishing
             //Angler Boots
             if (Game1.player.boots.Value != null && Game1.player.boots.Get().displayName == "Angler Boots" && !anglerBootsEvent)
             {
-                this.Monitor.Log($"Boots put on!", LogLevel.Debug);
                 Game1.player.addedFishingLevel.Value += 1;
                 this.anglerBootsEvent = true;
             }
-            if (Game1.player.boots.Value == null && anglerBootsEvent)
+            if ((Game1.player.boots.Value == null || (Game1.player.boots.Value != null && Game1.player.boots.Get().displayName != "Angler Boots")) && anglerBootsEvent)
             {
-                this.Monitor.Log($"Boots taken off!", LogLevel.Debug);
                 Game1.player.addedFishingLevel.Value -= 1;
                 this.anglerBootsEvent = false;
+            }
+
+            //Angler Vest
+            if (Game1.player.shirtItem.Value != null && Game1.player.shirtItem.Get().displayName == "Angler Vest" && !anglerVestEvent)
+            {
+                Game1.player.addedFishingLevel.Value += 1;
+                this.anglerVestEvent = true;
+            }
+            if ((Game1.player.shirtItem.Value == null || (Game1.player.shirtItem.Value != null && Game1.player.shirtItem.Get().displayName != "Angler Vest")) && anglerVestEvent)
+            {
+                Game1.player.addedFishingLevel.Value -= 1;
+                this.anglerVestEvent = false;
             }
 
         }
