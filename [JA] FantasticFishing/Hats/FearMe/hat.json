@@ -1,6 +1,6 @@
 {
 	"Name": "True Fisher Hat",
-	"Description": "It says 'Women Want Me, Fish Fear Me.' Seems... haughty.",
+	"Description": "It says 'Women Want Me, Fish Fear Me.' Seems... haughty. +1 Fishing when worn.",
 	"PurchasePrice": 2500,
 	"ShowHair": false,
 	"IgnoreHairstyleOffset": false,
