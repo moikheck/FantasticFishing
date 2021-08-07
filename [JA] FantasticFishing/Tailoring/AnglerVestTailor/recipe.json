@@ -1,0 +1,6 @@
+{
+    "FirstItemTags": ["item_cloth"],
+    "SecondItemTags": ["item_angler_boots"],
+    "ConsumeSecondItem": true,
+    "CraftedItems": ["Angler Vest"]
+}

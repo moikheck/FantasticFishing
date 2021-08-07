@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Netcode;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
@@ -36,7 +37,16 @@ namespace FantasticFishing
             // ignore if player hasn't loaded a save yet
             if (!Context.IsWorldReady)
                 return;
-
+            if (e.Button.ToString().Equals("MouseRight"))
+            {
+                StardewValley.Object object1 = (StardewValley.Object) null;
+                Game1.currentLocation.Objects.TryGetValue(new Vector2(e.Cursor.Tile.X, e.Cursor.Tile.Y), out object1);
+                if (object1 != null && object1.displayName.Equals("Recycling Machine") && object1.heldObject.Value == null && Game1.player.CurrentItem != null)
+                {
+                    dropItemInRecycling(object1);
+                }
+            }
+                
             // print button presses to the console window
             this.Monitor.Log($"{Game1.player.Name} pressed {e.Button}.", LogLevel.Debug);
         }
@@ -99,6 +109,35 @@ namespace FantasticFishing
                 this.anglerVestEvent = false;
             }
 
+        }
+        public void dropItemInRecycling(StardewValley.Object object1)
+        {
+            bool recycling = false;
+            int timer = 0;
+            if (Game1.player.CurrentItem.DisplayName.Equals("Old Boot") && Game1.player.CurrentItem.Stack >= 2)
+            {
+                object1.heldObject.Value = new StardewValley.Object(3000, 1);
+                removeItemsFromInventoryFF(Game1.player, Game1.player.CurrentItem, 2);
+                recycling = true;
+                timer = 120;
+            }
+            if (recycling)
+            {
+                Game1.player.currentLocation.playSound("trashcan");
+                object1.minutesUntilReady.Value = timer;
+                ++Game1.stats.PiecesOfTrashRecycled;
+            }
+        }
+
+        public void removeItemsFromInventoryFF(Farmer player, Item which, int count)
+        {
+            int index = player.items.IndexOf(which);
+            int currentStack = which.Stack;
+            currentStack -= count;
+            if (currentStack == 0)
+                player.items[index] = (Item)null;
+            else
+                which.Stack = currentStack;
         }
 
     }
