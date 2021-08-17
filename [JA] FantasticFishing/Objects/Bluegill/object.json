@@ -1,0 +1,13 @@
+{
+	"Name": "Bluegill",
+	"Description": "A freshwater fish that prefers the shade.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 65,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

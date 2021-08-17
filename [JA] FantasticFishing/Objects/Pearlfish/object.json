@@ -1,0 +1,13 @@
+{
+	"Name": "Pearlfish",
+	"Description": "A slender fish that lives deep in the ocean.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 130,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"Name": "Arowana",
+	"Description": "An aggressive, carnivorous river fish.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 225,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

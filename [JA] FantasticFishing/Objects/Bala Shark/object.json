@@ -1,0 +1,13 @@
+{
+	"Name": "Bala Shark",
+	"Description": "A tropical fish common in aquariums.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 70,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

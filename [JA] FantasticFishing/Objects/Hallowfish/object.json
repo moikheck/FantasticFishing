@@ -1,0 +1,13 @@
+{
+	"Name": "Hallowfish",
+	"Description": "It seems to be made entirely of crystals.",
+	"Category": "Fish",
+	"Edibility": 50,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 1500,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

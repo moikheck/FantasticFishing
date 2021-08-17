@@ -1,0 +1,13 @@
+{
+	"Name": "Hoki",
+	"Description": "An ocean fish that is commonly filleted.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 100,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

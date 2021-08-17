@@ -1,0 +1,13 @@
+{
+	"Name": "Lost River Sucker",
+	"Description": "An endangered fish that prefers deep pools and rivers.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 175,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

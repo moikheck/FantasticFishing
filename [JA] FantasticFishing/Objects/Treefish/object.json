@@ -1,0 +1,13 @@
+{
+	"Name": "Treefish",
+	"Description": "A marine fish that prefers caves.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 145,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

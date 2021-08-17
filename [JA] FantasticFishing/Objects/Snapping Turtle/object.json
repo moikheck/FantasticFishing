@@ -1,0 +1,13 @@
+{
+	"Name": "Snapping Turtle",
+	"Description": "Not quite a fish.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 95,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

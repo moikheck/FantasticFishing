@@ -1,0 +1,13 @@
+{
+	"Name": "Opaleye",
+	"Description": "A very common marine fish hunted for sport.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 55,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

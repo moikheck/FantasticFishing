@@ -1,0 +1,13 @@
+{
+	"Name": "Vermilion Snapper",
+	"Description": "There must be a rainbow of snappers.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 75,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"Name": "Queen Parrotfish",
+	"Description": "A suitable queen for the islands.",
+	"Category": "Fish",
+	"Edibility": 50,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 2750,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"Name": "Coelacanth",
+	"Description": "A very old, very rare, previously-thought extinct fish.",
+	"Category": "Fish",
+	"Edibility": 50,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 1250,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

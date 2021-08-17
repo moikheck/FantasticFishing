@@ -1,0 +1,13 @@
+{
+	"Name": "Neon Tetra",
+	"Description": "A vibrant freshwater fish.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 60,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

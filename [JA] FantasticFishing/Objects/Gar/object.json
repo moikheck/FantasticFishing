@@ -1,0 +1,13 @@
+{
+	"Name": "Gar",
+	"Description": "A long-nosed freshwater fish.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 85,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

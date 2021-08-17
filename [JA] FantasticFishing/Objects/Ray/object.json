@@ -1,0 +1,13 @@
+{
+	"Name": "Manta Ray",
+	"Description": "An elegant, tropical ray.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 150,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

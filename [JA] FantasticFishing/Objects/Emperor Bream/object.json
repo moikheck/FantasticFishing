@@ -1,0 +1,13 @@
+{
+	"Name": "Emperor Bream",
+	"Description": "A tropical fish that holds no actual royalty.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 115,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

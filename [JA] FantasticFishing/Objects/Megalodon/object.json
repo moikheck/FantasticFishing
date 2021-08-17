@@ -1,0 +1,13 @@
+{
+	"Name": "Megalodon",
+	"Description": "This was thought to be extinct for millions of years.",
+	"Category": "Fish",
+	"Edibility": 200,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 25000,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"Name": "Combfish",
+	"Description": "A long, black and white fish that thrives in the ocean.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 80,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

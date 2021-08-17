@@ -1,0 +1,13 @@
+{
+	"Name": "Moray Eel",
+	"Description": "That's a moray!",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 95,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

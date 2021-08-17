@@ -1,0 +1,13 @@
+{
+	"Name": "Tadpole",
+	"Description": "Common in ponds and pools.",
+	"Category": "Fish",
+	"Edibility": 5,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 25,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

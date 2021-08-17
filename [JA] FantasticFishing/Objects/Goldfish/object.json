@@ -1,0 +1,14 @@
+{
+	"Name": "Goldfish",
+	"Description": "Though common and fun, goldfish released into the wild are an invasive nightmare.",
+	"Category": "Fish",
+	"Edibility": 10,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 400,
+	"IsColored": false,
+	"CanSell": false,
+	"GiftTastes":
+	{
+	}
+}

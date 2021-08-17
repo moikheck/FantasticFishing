@@ -1,0 +1,13 @@
+{
+	"Name": "Common Seadragon",
+	"Description": "A beautiful tropical fish.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 115,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

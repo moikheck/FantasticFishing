@@ -1,0 +1,13 @@
+{
+	"Name": "Archerfish",
+	"Description": "A freshwater fish that preys on insects by shooting water droplets at them.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 75,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

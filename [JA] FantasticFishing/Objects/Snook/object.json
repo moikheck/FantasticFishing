@@ -1,0 +1,13 @@
+{
+	"Name": "Snook",
+	"Description": "A marine fish with a distinct black line.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 110,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

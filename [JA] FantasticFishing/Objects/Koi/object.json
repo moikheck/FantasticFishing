@@ -1,0 +1,10 @@
+{
+	"Name": "Koi",
+	"Description": "A domesticated pond fish.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 70,
+	"IsColored": false
+}

@@ -1,0 +1,13 @@
+{
+	"Name": "Angelfish",
+	"Description": "Sent from above, caught from below.",
+	"Category": "Fish",
+	"Edibility": 15,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 95,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

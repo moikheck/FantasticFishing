@@ -1,0 +1,13 @@
+{
+	"Name": "Dragonet",
+	"Description": "A beautiful ocean fish.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 110,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

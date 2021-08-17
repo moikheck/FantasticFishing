@@ -1,0 +1,13 @@
+{
+	"Name": "Piranha",
+	"Description": "Despite being showcased as meat-eating, most are omnivorous.",
+	"Category": "Fish",
+	"Edibility": -20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 100,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

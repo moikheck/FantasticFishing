@@ -1,0 +1,13 @@
+{
+	"Name": "Noodlefish",
+	"Description": "A slender, translucent fish.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 130,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

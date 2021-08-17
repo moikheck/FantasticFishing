@@ -1,0 +1,13 @@
+{
+	"Name": "Oscar",
+	"Description": "It sure looks like an Oscar.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 100,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

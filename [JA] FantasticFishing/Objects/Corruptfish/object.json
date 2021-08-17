@@ -1,0 +1,13 @@
+{
+	"Name": "Corruptfish",
+	"Description": "Its mind is taken over by some sort of virus.",
+	"Category": "Fish",
+	"Edibility": 50,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 1500,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

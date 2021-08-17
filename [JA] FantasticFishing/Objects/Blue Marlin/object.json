@@ -1,0 +1,13 @@
+{
+	"Name": "Blue Marlin",
+	"Description": "A popular game fish. Not to be confused with the villager.",
+	"Category": "Fish",
+	"Edibility": -30,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 150,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

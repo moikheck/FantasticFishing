@@ -1,0 +1,13 @@
+{
+	"Name": "Lamprey",
+	"Description": "An ancient jawless fish commonly mistaken for an eel.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 130,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"Name": "Leaffish",
+	"Description": "A small fish that camouflages as a leaf to catch its prey.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 85,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

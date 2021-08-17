@@ -1,0 +1,13 @@
+{
+	"Name": "Goosefish",
+	"Description": "A large, flat, and ugly ocean fish",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 110,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

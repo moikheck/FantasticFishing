@@ -1,0 +1,13 @@
+{
+	"Name": "Amberjack",
+	"Description": "A popular game fish, but not that tasty.",
+	"Category": "Fish",
+	"Edibility": 10,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 125,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

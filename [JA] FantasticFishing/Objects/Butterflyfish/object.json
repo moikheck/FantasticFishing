@@ -1,0 +1,13 @@
+{
+	"Name": "Butterflyfish",
+	"Description": "A tropical marine fish valued for their colorations.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 95,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

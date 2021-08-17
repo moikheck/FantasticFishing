@@ -1,0 +1,13 @@
+{
+	"Name": "Zebra Tilapia",
+	"Description": "A freshwater fish with stripes that vary by its mood.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 115,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"Name": "Barracuda",
+	"Description": "A long, carnivorous fish that is dangerous to swimmers.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 150,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

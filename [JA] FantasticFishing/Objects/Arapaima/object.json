@@ -1,0 +1,13 @@
+{
+	"Name": "Arapaima",
+	"Description": "A very large fish for such a small town.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 175,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

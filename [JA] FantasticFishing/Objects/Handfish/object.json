@@ -1,0 +1,13 @@
+{
+	"Name": "Handfish",
+	"Description": "A grumpy-looking fish that propels itself across the ocean floor.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 95,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

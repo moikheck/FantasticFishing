@@ -1,0 +1,13 @@
+{
+	"Name": "Bitterling",
+	"Description": "A small, short-lived freshwater fish.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 55,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

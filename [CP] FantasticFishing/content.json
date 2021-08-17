@@ -1,0 +1,119 @@
+{
+"Format": "1.23.0",
+"Changes": [  
+    {   
+        "Action": "EditData",
+        "Target": "Data/ObjectContextTags",
+        "Entries": {  
+         "Angler Boots": "color_brown, boots_item",
+         "Old Boot": "color_brown, fish_ocean, trash_ocean, trash_old_boot, fish_old_boot",
+         "Angler Vest": "color_brown, clothing_item",
+         "True Fisher Hat": "color_green, color_white, clothing_item"
+        }
+   },
+
+   {
+        "Action": "EditData",
+        "Target": "Data/ObjectInformation",
+        "Entries": {
+        "{{spacechase0.JsonAssets/ObjectId:Old Boot}}": "Old Boot/1/-300/Fish -20/Old Boot/Perhaps two of these are useful./Day Night/Spring Summer Fall Winter"
+        }
+    },
+
+   {
+     "Action": "EditData",
+     "Target": "Data/Locations",
+     "Entries": {
+     //"Farm": "-1/-1/-1/-1/3700 -1/3700 -1/3700 -1/3700 -1/382 .35 770 .2 390 .75 330 1 3700 50"
+     }
+   },
+   
+   {
+      "Action": "EditData",
+      "Target": "Data/Fish",
+      "Entries": {
+      "3700": "Old Boot/5/smooth/8/16/600 2600/spring summer fall winter/both/690 .04/2/.25/.1/8"
+     }
+   },
+   /*
+   {
+      "Action": "EditData",
+      "Target": "Data/AquariumFish",
+      "Entries": {
+      //"{{spacechase0.JsonAssets/ObjectId:Puppyfish}}": "92/float",
+       }
+   },
+   /*
+        //FISH POND DATA
+         
+   {    //BUTTERFISH
+       "Action": "EditData",
+       "Target": "Data/FishPondData",
+       "Entries": { 
+       "Butterfish": {
+       "RequiredTags": [ "item_butterfish" ],
+       "SpawnTime": -1,
+       "ProducedItems": [
+       {
+       "RequiredPopulation": 10,	
+       "Chance": 0.15,
+       "ItemID": "{{spacechase0.JsonAssets/ObjectId:Glazed Butterfish}}",
+       "MinQuantity": 1,
+       "MaxQuantity": 3
+       },
+       {
+       "RequiredPopulation": 6,
+       "Chance": 0.20,
+       "ItemID": 214,
+       "MinQuantity": 1,
+       "MaxQuantity": 2
+       },
+       {
+       "RequiredPopulation": 3,
+       "Chance": 0.30,
+       "ItemID": 198,
+       "MinQuantity": 1,
+       "MaxQuantity": 2
+       },
+       {
+       "RequiredPopulation": 0,
+       "Chance": 1.0,
+       "ItemID": 812,
+       "MinQuantity": 1,
+       "MaxQuantity": 1
+       }
+     ],
+       "PopulationGates": {
+       "6": [ "340 5" ]
+         },
+      },
+    },
+   },
+   
+
+   {
+       "Action": "EditData",
+       "Target": "Data/FishPondData",
+       "MoveEntries": [
+       { "ID": "item_butterfish", "ToPosition": "Top" },
+       { "ID": "item_puppyfish", "AfterID": "item_butterfish" },
+       { "ID": "item_clownfish", "AfterID": "item_puppyfish" },
+       { "ID": "item_minnow", "AfterID": "item_clownfish" },
+       { "ID": "item_starfish", "AfterID": "item_minnow" },
+       { "ID": "item_void_eel", "AfterID": "item_starfish" },
+       { "ID": "item_king_salmon", "AfterID": "item_void_eel" },
+       { "ID": "item_frog", "AfterID": "item_king_salmon" },
+       { "ID": "item_kittyfish", "AfterID": "item_frog" },
+       { "ID": "item_seahorse", "AfterID": "item_kittyfish" },
+       { "ID": "item_sea_sponge", "AfterID": "item_seahorse" },
+       { "ID": "item_lunaloo", "AfterID": "item_sea_sponge" },
+       { "ID": "item_baby_lunaloo", "AfterID": "item_lunaloo" },
+       { "ID": "item_shiny_lunaloo", "AfterID": "item_baby_lunaloo" },
+       { "ID": "item_bonefish", "AfterID": "item_shiny_lunaloo" },
+       { "ID": "item_undeadfish", "AfterID": "item_bonefish" },
+       { "ID": "item_radioactive_bass", "AfterID": "item_undeadfish" },
+     ]
+   },
+    */
+]
+}

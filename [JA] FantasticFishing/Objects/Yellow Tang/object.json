@@ -1,0 +1,13 @@
+{
+	"Name": "Yellow Tang",
+	"Description": "An oval fish that hangs around coral reefs.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 130,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Netcode;
 using Microsoft.Xna.Framework;
 using StardewModdingAPI;
 using StardewModdingAPI.Events;
@@ -12,13 +11,16 @@ using StardewValley;
 
 namespace FantasticFishing
 {
-    public class ModEntry : Mod
+    public class ModEntry : StardewModdingAPI.Mod
     {
+        public static Mod instance;
+
         private bool trueHatEvent = false;
         private bool anglerBootsEvent = false;
         private bool anglerVestEvent = false;
         public override void Entry(IModHelper helper)
         {
+            instance = this;
             helper.Events.Input.ButtonPressed += this.OnButtonPressed;
             helper.Events.GameLoop.UpdateTicked += this.OnUpdateTicked;
             helper.Events.GameLoop.DayStarted += this.OnWearingGearOvernight;
@@ -39,11 +41,14 @@ namespace FantasticFishing
                 return;
             if (e.Button.ToString().Equals("MouseRight"))
             {
-                StardewValley.Object object1 = (StardewValley.Object) null;
+                StardewValley.Object object1;
                 Game1.currentLocation.Objects.TryGetValue(new Vector2(e.Cursor.Tile.X, e.Cursor.Tile.Y), out object1);
-                if (object1 != null && object1.displayName.Equals("Recycling Machine") && object1.heldObject.Value == null && Game1.player.CurrentItem != null)
+                if (object1 != null
+                        && object1.displayName.Equals("Recycling Machine")
+                        && object1.heldObject.Value == null
+                        && Game1.player.CurrentItem != null)
                 {
-                    dropItemInRecycling(object1);
+                    dropItemInRecycling(Game1.player, object1);
                 }
             }
                 
@@ -110,20 +115,45 @@ namespace FantasticFishing
             }
 
         }
-        public void dropItemInRecycling(StardewValley.Object object1)
+
+        public IDictionary<string, int> switchDictionaryValues(IDictionary<int, string> toSwitch)
+        {
+            this.Monitor.Log($"{toSwitch.Keys} {toSwitch.Values}", LogLevel.Debug);
+            IDictionary<string, int> returnDictionary = null;
+            foreach(int key in toSwitch.Keys)
+            {
+                returnDictionary.Add(toSwitch.TryGetValue(key, out string name) ? name : null, key);
+            }
+            if(toSwitch.Values.Contains("Angler Boots"))
+            {
+
+            }
+            this.Monitor.Log($"{returnDictionary}", LogLevel.Debug);
+            return returnDictionary;
+        }
+
+        private int GetId(IDictionary<int, string> toSwitch, string name)
+        {
+            IDictionary<string, int> ids = switchDictionaryValues(toSwitch);
+            return ids != null && ids.TryGetValue(name, out int id)
+                ? id
+                : -1;
+        }
+        public void dropItemInRecycling(Farmer player, StardewValley.Object object1)
         {
             bool recycling = false;
             int timer = 0;
-            if (Game1.player.CurrentItem.DisplayName.Equals("Old Boot") && Game1.player.CurrentItem.Stack >= 2)
+            this.Monitor.Log($"{player.CurrentItem.Name}", LogLevel.Debug);
+            if (player.CurrentItem.Name.Equals("Old Boot") && player.CurrentItem.Stack >= 2)
             {
-                object1.heldObject.Value = new StardewValley.Object(3000, 1);
-                removeItemsFromInventoryFF(Game1.player, Game1.player.CurrentItem, 2);
+                object1.heldObject.Value = new StardewValley.Object(3700, 1);
+                removeItemsFromInventoryFF(player, player.CurrentItem, 2);
                 recycling = true;
                 timer = 120;
             }
             if (recycling)
             {
-                Game1.player.currentLocation.playSound("trashcan");
+                player.currentLocation.playSound("trashcan");
                 object1.minutesUntilReady.Value = timer;
                 ++Game1.stats.PiecesOfTrashRecycled;
             }

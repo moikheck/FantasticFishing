@@ -1,0 +1,13 @@
+{
+	"Name": "Freshwater Goby",
+	"Description": "It looks almost sad.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 50,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

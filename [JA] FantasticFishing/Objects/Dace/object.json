@@ -1,0 +1,13 @@
+{
+	"Name": "Dace",
+	"Description": "A common freshwater fish.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 55,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

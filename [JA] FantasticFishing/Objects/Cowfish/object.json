@@ -1,0 +1,13 @@
+{
+	"Name": "Cowfish",
+	"Description": "A boxy, spotted fish that lives in the ocean.",
+	"Category": "Fish",
+	"Edibility": 20,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 85,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}
