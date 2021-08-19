@@ -5,7 +5,7 @@
 	"Edibility": 10,
 	"EdibleIsDrink": false,
 	"EdibleBuffs": null,
-	"Price": 400,
+	"Price": 15,
 	"IsColored": false,
 	"CanSell": false,
 	"GiftTastes":
