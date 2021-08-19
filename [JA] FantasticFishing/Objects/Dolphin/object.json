@@ -1,0 +1,13 @@
+{
+	"Name": "Dolphin",
+	"Description": "A very intelligent marine animal.",
+	"Category": "Fish",
+	"Edibility": 30,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 200,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}

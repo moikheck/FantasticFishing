@@ -1,0 +1,13 @@
+{
+	"Name": "Moifish",
+	"Description": "A friendly fish that is said to pool near those with heart.",
+	"Category": "Fish",
+	"Edibility": -300,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 80,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}
