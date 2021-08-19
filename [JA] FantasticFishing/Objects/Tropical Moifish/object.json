@@ -1,0 +1,13 @@
+{
+	"Name": "Tropical Moifish",
+	"Description": "A very friendly moifish variant.",
+	"Category": "Fish",
+	"Edibility": -300,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Price": 150,
+	"IsColored": false,
+	"GiftTastes":
+	{
+	}
+}
