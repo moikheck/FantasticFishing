@@ -1,7 +1,7 @@
 {
   "Name": "Fantastic Fishing",
   "Author": "moikheck",
-  "Version": "0.0.1",
+  "Version": "0.1.0",
   "Description": "New fish, equipment, and more: the Fantastic Fishing mod!",
   "UniqueID": "moikheck.FantasticFishing",
   "EntryDll": "FantasticFishing.dll",

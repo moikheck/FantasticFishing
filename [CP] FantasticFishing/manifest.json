@@ -1,7 +1,7 @@
 {
     "Name": "[CP] Fantastic Fishing",
     "Author": "moikheck",
-    "Version": "0.0.1",
+    "Version": "0.1.0",
     "Description": "The Content Patcher data for Fantastic Fishing.",
     "UniqueID": "moikheck.FantasticFishingCP",
     "MinimumApiVersion": "3.0.0",

@@ -8,6 +8,10 @@ using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewModdingAPI.Utilities;
 using StardewValley;
+using StardewValley.Objects;
+using Microsoft.Xna.Framework.Graphics;
+using Netcode;
+using System.Xml.Serialization;
 
 namespace FantasticFishing
 {
@@ -55,7 +59,6 @@ namespace FantasticFishing
             // print button presses to the console window
             this.Monitor.Log($"{Game1.player.Name} pressed {e.Button}.", LogLevel.Debug);
         }
-
         private void OnWearingGearOvernight(object sender, EventArgs e)
         {
             if(trueHatEvent)
@@ -77,6 +80,15 @@ namespace FantasticFishing
 
         private void OnUpdateTicked(object sender, EventArgs e)
         {
+            //Fix Error Boots
+            foreach (Item item in Game1.player.Items)
+            {
+                if (item != null && item.DisplayName == "Error Item")
+                {
+                    removeItemsFromInventoryFF(Game1.player, item, -1);
+                    Game1.player.addItemByMenuIfNecessary((Item)new Boots(getItemIDByName("Angler Boots", "Data//Boots")));
+                }
+            }
 
             //True Fisher Hat
             if (Game1.player.hat.Value != null && Game1.player.hat.Get().displayName == "True Fisher Hat" && !trueHatEvent)
@@ -115,30 +127,6 @@ namespace FantasticFishing
             }
 
         }
-
-        public IDictionary<string, int> switchDictionaryValues(IDictionary<int, string> toSwitch)
-        {
-            this.Monitor.Log($"{toSwitch.Keys} {toSwitch.Values}", LogLevel.Debug);
-            IDictionary<string, int> returnDictionary = null;
-            foreach(int key in toSwitch.Keys)
-            {
-                returnDictionary.Add(toSwitch.TryGetValue(key, out string name) ? name : null, key);
-            }
-            if(toSwitch.Values.Contains("Angler Boots"))
-            {
-
-            }
-            this.Monitor.Log($"{returnDictionary}", LogLevel.Debug);
-            return returnDictionary;
-        }
-
-        private int GetId(IDictionary<int, string> toSwitch, string name)
-        {
-            IDictionary<string, int> ids = switchDictionaryValues(toSwitch);
-            return ids != null && ids.TryGetValue(name, out int id)
-                ? id
-                : -1;
-        }
         public void dropItemInRecycling(Farmer player, StardewValley.Object object1)
         {
             bool recycling = false;
@@ -146,10 +134,10 @@ namespace FantasticFishing
             this.Monitor.Log($"{player.CurrentItem.Name}", LogLevel.Debug);
             if (player.CurrentItem.Name.Equals("Old Boot") && player.CurrentItem.Stack >= 2)
             {
-                object1.heldObject.Value = new StardewValley.Object(3700, 1);
+                object1.heldObject.Value = new StardewValley.Object(getItemIDByName("Angler Boots", "Data//Boots"), 1);
                 removeItemsFromInventoryFF(player, player.CurrentItem, 2);
                 recycling = true;
-                timer = 120;
+                timer = 10;//set to 120 on final
             }
             if (recycling)
             {
@@ -159,11 +147,29 @@ namespace FantasticFishing
             }
         }
 
+        public int getItemIDByName(string name, string dictionaryName)
+        {
+            Dictionary<int,string> dictionary = Game1.content.Load<Dictionary<int, string>>(dictionaryName);
+            foreach(int key in dictionary.Keys)
+            {
+                string[] strArray = Game1.content.Load<Dictionary<int, string>>(dictionaryName)[key].Split('/');
+                this.Monitor.Log($"{key} {strArray[strArray.Length - 1]}", LogLevel.Debug);
+                if (name.Equals(strArray[strArray.Length - 1]))
+                {
+                    return key;
+                }
+            }
+            return -1;
+        }
+
         public void removeItemsFromInventoryFF(Farmer player, Item which, int count)
         {
             int index = player.items.IndexOf(which);
             int currentStack = which.Stack;
-            currentStack -= count;
+            if (count == -1)
+                currentStack = 0;
+            else
+                currentStack -= count;
             if (currentStack == 0)
                 player.items[index] = (Item)null;
             else
