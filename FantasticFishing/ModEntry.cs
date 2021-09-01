@@ -18,6 +18,9 @@ namespace FantasticFishing
     public class ModEntry : StardewModdingAPI.Mod
     {
         public static Mod instance;
+        RecyclingEdit recyclingEdit = new RecyclingEdit();
+        MoikUtils moikUtils = new MoikUtils();
+        FishingNet fishingNet = new FishingNet();
 
         private bool trueHatEvent = false;
         private bool anglerBootsEvent = false;
@@ -29,15 +32,9 @@ namespace FantasticFishing
             helper.Events.GameLoop.UpdateTicked += this.OnUpdateTicked;
             helper.Events.GameLoop.DayStarted += this.OnWearingGearOvernight;
             helper.Events.GameLoop.SaveLoaded += this.OnWearingGearOnLogin;
+            helper.Events.GameLoop.DayStarted += this.OnFishingNetCheck;
         }
 
-
-        /*********
-        ** Private methods
-        *********/
-        /// <summary>Raised after the player presses a button on the keyboard, controller, or mouse.</summary>
-        /// <param name="sender">The event sender.</param>
-        /// <param name="e">The event data.</param>
         private void OnButtonPressed(object sender, ButtonPressedEventArgs e)
         {
             // ignore if player hasn't loaded a save yet
@@ -47,12 +44,19 @@ namespace FantasticFishing
             {
                 StardewValley.Object object1;
                 Game1.currentLocation.Objects.TryGetValue(new Vector2(e.Cursor.Tile.X, e.Cursor.Tile.Y), out object1);
+                //Player clicking Recycling Machine - run machine function
                 if (object1 != null
                         && object1.displayName.Equals("Recycling Machine")
                         && object1.heldObject.Value == null
                         && Game1.player.CurrentItem != null)
                 {
-                    dropItemInRecycling(Game1.player, object1);
+                    recyclingEdit.dropItemInRecycling(Game1.player, object1);
+                }
+                //Player has fishing net - run fishing net function
+                else if (Game1.player.CurrentItem != null 
+                        && Game1.player.CurrentItem.Name.Equals("Fishing Net"))
+                {
+                    fishingNet.isNetSpot(Game1.player, Game1.currentLocation, new Vector2(e.Cursor.Tile.X, e.Cursor.Tile.Y));
                 }
             }
                 
@@ -61,11 +65,11 @@ namespace FantasticFishing
         }
         private void OnWearingGearOvernight(object sender, EventArgs e)
         {
-            if(trueHatEvent)
+            if (trueHatEvent)
                 Game1.player.addedFishingLevel.Value += 1;
-            if(anglerBootsEvent)
+            if (anglerBootsEvent)
                 Game1.player.addedFishingLevel.Value += 1;
-            if(anglerVestEvent)
+            if (anglerVestEvent)
                 Game1.player.addedFishingLevel.Value += 1;
         }
         private void OnWearingGearOnLogin(object sender, EventArgs e)
@@ -78,6 +82,12 @@ namespace FantasticFishing
                 Game1.player.addedFishingLevel.Value -= 1;
         }
 
+        private void OnFishingNetCheck(object sender, EventArgs e)
+        {
+            //something something find nets and replace items
+            //function: find all fish and sort out which can be in each net
+        }
+
         private void OnUpdateTicked(object sender, EventArgs e)
         {
             //Fix Error Boots
@@ -85,8 +95,8 @@ namespace FantasticFishing
             {
                 if (item != null && item.DisplayName == "Error Item")
                 {
-                    removeItemsFromInventoryFF(Game1.player, item, -1);
-                    Game1.player.addItemByMenuIfNecessary((Item)new Boots(getItemIDByName("Angler Boots", "Data//Boots")));
+                    moikUtils.removeItemsFromInventoryFF(Game1.player, item, -1);
+                    Game1.player.addItemByMenuIfNecessary((Item)new Boots(moikUtils.getItemIDByName("Angler Boots", "Data//Boots")));
                 }
             }
 
@@ -127,54 +137,5 @@ namespace FantasticFishing
             }
 
         }
-        public void dropItemInRecycling(Farmer player, StardewValley.Object object1)
-        {
-            bool recycling = false;
-            int timer = 0;
-            this.Monitor.Log($"{player.CurrentItem.Name}", LogLevel.Debug);
-            if (player.CurrentItem.Name.Equals("Old Boot") && player.CurrentItem.Stack >= 2)
-            {
-                object1.heldObject.Value = new StardewValley.Object(getItemIDByName("Angler Boots", "Data//Boots"), 1);
-                removeItemsFromInventoryFF(player, player.CurrentItem, 2);
-                recycling = true;
-                timer = 10;//set to 120 on final
-            }
-            if (recycling)
-            {
-                player.currentLocation.playSound("trashcan");
-                object1.minutesUntilReady.Value = timer;
-                ++Game1.stats.PiecesOfTrashRecycled;
-            }
-        }
-
-        public int getItemIDByName(string name, string dictionaryName)
-        {
-            Dictionary<int,string> dictionary = Game1.content.Load<Dictionary<int, string>>(dictionaryName);
-            foreach(int key in dictionary.Keys)
-            {
-                string[] strArray = Game1.content.Load<Dictionary<int, string>>(dictionaryName)[key].Split('/');
-                this.Monitor.Log($"{key} {strArray[strArray.Length - 1]}", LogLevel.Debug);
-                if (name.Equals(strArray[strArray.Length - 1]))
-                {
-                    return key;
-                }
-            }
-            return -1;
-        }
-
-        public void removeItemsFromInventoryFF(Farmer player, Item which, int count)
-        {
-            int index = player.items.IndexOf(which);
-            int currentStack = which.Stack;
-            if (count == -1)
-                currentStack = 0;
-            else
-                currentStack -= count;
-            if (currentStack == 0)
-                player.items[index] = (Item)null;
-            else
-                which.Stack = currentStack;
-        }
-
     }
 }

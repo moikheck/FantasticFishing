@@ -1,0 +1,36 @@
+{
+	"Name": "Fishing Net",
+	"Description": "Can be placed in water. Catches one or more seasonal fish of one type overnight. Requires bait.",
+	"Category": "Crafting",
+	"Edibility": -300,
+	"EdibleIsDrink": false,
+	"EdibleBuffs": null,
+	"Recipe": {
+		"ResultCount": 1,
+		"Ingredients": [
+			{
+				"Object": 428,
+				"Count": 2
+			},
+			{
+				"Object": 710,
+				"Count": 1
+			}
+		],
+		"CanPurchase": true,
+		"PurchaseFrom": "Willy",
+		"PurchasePrice": 5000
+	},
+	"CanSell": false,
+	"Price": 800,
+	"IsColored": false,
+	"GiftTastes": {
+		/*gift tastes go here*/
+	},
+	"NameLocalization": {
+		/*to be added in*/
+	},
+	"DescriptionLocalization": {
+		/*to be added in*/
+	}
+}
